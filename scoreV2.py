@@ -12,19 +12,18 @@
 
 
 def computegrade(score):
-    if score >= 0.0 and score <= 1.0:
-        if score >= 0.9:
-            return 'A'
-        elif score >= 0.8:
-            return 'B'
-        elif score >= 0.7:
-            return 'C'
-        elif score >= 0.6:
-            return 'D'
-        else:
-            return 'F'
+    if score < 0.0 or score > 1.0:
+        return 'Bad Score'
+    elif score >= 0.9:
+        return 'A'
+    elif score >= 0.8:
+        return 'B'
+    elif score >= 0.7:
+        return 'C'
+    elif score >= 0.6:
+        return 'D'
     else:
-        return 'Please enter positive values within range 0.0 and 1.0'
+        return 'F'
 
 
 input_score = input("Enter Score Between 0.0 and 1.0: ")
